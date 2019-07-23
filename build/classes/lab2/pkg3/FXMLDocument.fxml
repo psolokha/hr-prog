@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane id="root" 
+          xmlns:fx="http://javafx.com/fxml/1" 
+          fx:controller="lab2.pkg3.FXMLDocumentController">
+          <HBox         GridPane.columnIndex="1" 
+                        GridPane.rowIndex="7" 
+                        >
+        <Button         text="Add"  
+                        fx:id="addBtn"
+                        onAction="#addButtonClick" 
+                         
+                        />
+        <Button         text="Rem" 
+                        fx:id="rmvBtn"
+                        onAction="#rmvButtonClick"   
+                        />
+        
+          </HBox>
+          <VBox         GridPane.columnIndex="0"
+                        GridPane.rowIndex="1" 
+                        >
+        <RadioButton    text="Known person"
+                        fx:id="rbntk"
+                        selected="false" 
+                        onAction="#knownButtonSelected"  
+                        >
+            <toggleGroup>
+                        <ToggleGroup fx:id="group"/>
+            </toggleGroup>
+        </RadioButton>
+        <RadioButton    text="Uknown person"
+                        fx:id="rbtnu"
+                        selected="true"
+                        onAction="#unknownButtonSelected" 
+                        toggleGroup="$group" 
+                        />
+          </VBox>
+        <ListView       fx:id="plist"
+                        onMouseClicked="#handleMouseClick" 
+                        minWidth="300" maxWidth="300"
+                        minHeight="300" maxHeight="500"
+                        GridPane.columnIndex="0" 
+                        GridPane.columnSpan="4"
+                        GridPane.rowIndex="0"    
+                        />
+        
+        <ImageView      fx:id="imgv"
+                        
+                        GridPane.columnIndex="5"
+                        GridPane.rowIndex="0"   
+                        />
+        
+        <TextField      fx:id="setname"
+                        text="Name"
+                        GridPane.columnIndex="1"
+                        GridPane.rowIndex="3"
+                        />
+        
+        <TextField      fx:id="setage"
+                        text="0"
+                        GridPane.columnIndex="1"
+                        GridPane.rowIndex="4"
+                        />
+        <TextField      fx:id="setphoto"
+                        text="Path"
+                        GridPane.columnIndex="1"
+                        GridPane.rowIndex="5"
+                        />
+        <TextField      fx:id="setid"
+                        text="0"
+                        GridPane.columnIndex="1"
+                        GridPane.rowIndex="6"
+                        />
+        <Label          text="Name :"
+                        GridPane.columnIndex="0"
+                        GridPane.rowIndex="3"
+                        />
+        <Label          text="Age :"
+                        GridPane.columnIndex="0"
+                        GridPane.rowIndex="4"
+                        />
+        <Label          text="Path :"
+                        GridPane.columnIndex="0"
+                        GridPane.rowIndex="5"
+                        />
+        <Label          text="ID :"
+                        GridPane.columnIndex="0"
+                        GridPane.rowIndex="6"
+                        />
+
+</GridPane>

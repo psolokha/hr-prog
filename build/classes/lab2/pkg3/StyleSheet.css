@@ -1,0 +1,21 @@
+GridPane
+{
+    -fx-padding: 10;
+    -fx-hgap: 10px;
+    -fx-vgap: 10px;
+    width: 500px;
+    height: 500px;
+    -fx-background-color: cadetblue;
+}
+.imgv
+{
+    
+}
+TextField
+{
+    -fx-alignment: CENTER_LEFT;
+}
+Label
+{
+    -fx-text-alignment: right;
+}
